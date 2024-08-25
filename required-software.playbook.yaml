@@ -1,0 +1,9 @@
+- name: install/verify required packages are installed
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: podman
+      become: true
+      ansible.builtin.apt:
+        pkg:
+          - podman

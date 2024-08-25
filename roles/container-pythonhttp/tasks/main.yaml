@@ -1,0 +1,7 @@
+---
+- name: container start/stop
+  containers.podman.podman_container:
+    name: pythonhttp
+    image: docker.io/dorfsmay/pythonhttp
+    ports: "8080:8080"
+    state: "{{ state }}"

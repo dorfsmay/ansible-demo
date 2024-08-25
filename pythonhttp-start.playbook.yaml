@@ -1,0 +1,7 @@
+
+- name: start pythonhttp container
+  hosts: node01
+  gather_facts: false
+  roles:
+    - role: container-pythonhttp
+      state: "started"
